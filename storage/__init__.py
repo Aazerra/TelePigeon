@@ -1,6 +1,14 @@
 import abc
 
 
+# class StorageMeta(type):
+#     def __new__(cls, name, bases, body):
+#         if name != 'StorageMeta' and not 'bar' in body:
+#             raise TypeError("bad user class")
+#         print('BaseMeta.__new__', cls, name, bases, body)
+#         return super().__new__(cls, name, bases, body)
+#
+
 class Storage(abc.ABC):
     @abc.abstractmethod
     def get_user(self, user_id):

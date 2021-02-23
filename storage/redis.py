@@ -21,9 +21,6 @@ class RedisStorage(Storage):
     def get_admin(self):
         return int(self._redis.get("admin"))
 
-    # k v
-    # h k v
-
     def set_admin(self, user_id):
         user_data = {
             "name": "None",
